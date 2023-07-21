@@ -1,0 +1,223 @@
+:root{
+    --animation-time:2s;
+    --animation-time-b:6s;
+    --main-color:#00F7FF;
+    --active-color:#006063;
+    --colorhight:#00F7FF;
+    --header-height:56px;
+}
+header{
+    height:var(--header-height);
+    width: 100vw;
+}
+main{
+    height:calc(100vh - var(--header-height));
+    position: relative;
+    padding:1rem;
+    z-index:1
+}
+.danger{
+    svg{
+        g{
+        }
+    }
+}
+.dangerFont{
+    color:rgb(255, 0, 0)
+}
+.dangerPanel{
+ fill: rgba(255,0,0,.8)
+}
+.dangerLine{
+       
+}
+
+
+*{
+    font-family:PingFang SC,HarmonyOS_Regular,Helvetica Neue,Microsoft YaHei,sans-serif!important;
+      box-sizing: border-box;
+      padding:0;
+      margin:0;
+  }
+
+  body,#app{
+    background:url('@/assets/background.png');
+    background-size:100%;
+
+    width:100vw;
+    height:100vh;
+  }
+  #box1{
+      position: relative;
+  }
+
+  #box1{
+      position: absolute;
+      top:2rem;
+      left:2rem;
+  }
+  body{
+      padding:0;
+      margin:0;
+      background-size:100%;
+  }
+  section{
+      position: relative;
+      width:100vw;
+      height:calc(100vh - 52px);
+  }
+  .linecolor{
+      fill:#01616a
+  }
+  header{
+      /* background-image: url('top.svg'); */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-position:center;
+      height: 52px;
+      width:100vw;
+  }
+  .frame{
+    position: absolute;
+  }
+  .ground{
+    margin: 3rem;
+    position: relative;
+    width:581px;
+    height:372px;
+  }
+  .modeul{
+    position: absolute;
+    z-index: 300;
+  }
+  input{
+      background-color: transparent;
+      z-index: 301;
+      border:0;
+      padding:0;
+      margin:0;
+      outline:0;
+      position: absolute;
+      top:4rem;
+      left:3rem;
+      color:#00F7FF;
+  }
+  h1,h2{
+    width: 100%;
+    text-align: center;
+    margin-top:0;
+      color:var(--colorhight);
+  }
+  side{
+      position: absolute;
+    margin:8px;
+  }
+  .topright{
+      top:0px;
+      right:8px;
+  }
+  .mirror {
+    transform: scaleX(-1);
+    right:8px;
+    position: absolute;
+    /* direction: rtl !important; */
+  }
+  .bottom{
+      position: absolute;
+      left:1rem;
+      bottom:8px;
+      z-index: -1;
+  }
+  .bottomright{
+      position: absolute;
+      right:1rem;
+      bottom:8px;
+      transform: scaleX(-1);
+  }
+  .move{
+    animation: move 3s infinite;
+  }
+  @keyframes move{
+    0%{transform: translateX(0px);}
+    50%{transform: translateX(200px);opacity: 1;}
+    100%{transform: translateX(300px);opacity: 0;}
+  }
+
+  main{
+  }
+  .flash1{ animation:flash1 var(--animation-time) infinite; }
+  .flash2{ animation:flash2 var(--animation-time) infinite; }
+  .flash3{ animation:flash3 var(--animation-time) infinite; }
+  .flash4{ animation:flash4 var(--animation-time) infinite; }
+  .flash5{ animation:flash5 var(--animation-time) infinite; }
+  .flash6{ animation:flash6 var(--animation-time) infinite; }
+  .flash7{ animation:flash7 var(--animation-time) infinite; }
+  .flash8{ animation:flash8 var(--animation-time) infinite; }
+  .flash9{ animation:flash9 var(--animation-time) infinite; }
+  .flash11{ animation:flash11 var(--animation-time) infinite; }
+  @keyframes flash11{ 0%, 100% { opacity: .1; } 50% { opacity: 1; } }
+  @keyframes flash1{ 0%, 100% { opacity: 0; } 10% { opacity: .1; } }
+  @keyframes flash8{ 0%, 100% { opacity: 0; } 20% { opacity: .8; } }
+  @keyframes flash7{ 0%, 100% { opacity: 0; } 30% { opacity: .7; } } 
+  @keyframes flash6{ 0%, 100% { opacity: 0; } 40% { opacity: .6; } }
+  @keyframes flash5{ 0%, 100% { opacity: 0; } 50% { opacity: .5; } }
+  @keyframes flash4{ 0%, 100% { opacity: 0; } 60% { opacity: .4; } }
+  @keyframes flash3{ 0%, 100% { opacity: 0; } 70% { opacity: .3; } }
+  @keyframes flash2{ 0%, 100% { opacity: 0; } 80% { opacity: .2; } }
+  @keyframes flash1{ 0%, 100% { opacity: 0; } 90% { opacity: .1; } }
+
+
+  
+  .a1{ animation: a1 var(--animation-time-b)  infinite; }
+  .a2{ animation: a2 var(--animation-time-b)  infinite; }
+  .a3{ animation: a3 var(--animation-time-b)  infinite; }
+  .a4{ animation: a4 var(--animation-time-b)  infinite; }
+  .a5{ animation: a5 var(--animation-time-b)  infinite; }
+  .a6{ animation: a6 var(--animation-time-b)  infinite; }
+  .a7{ animation: a7 var(--animation-time-b)  infinite; }
+  .a8{ animation: a8 var(--animation-time-b)  infinite; }
+  .a9{ animation: a9 var(--animation-time-b)  infinite; }
+  .a10{ animation: a10 var(--animation-time-b) infinite; }
+  .a11{ animation: a11 var(--animation-time-b) infinite; }
+  .a12{ animation: a12 var(--animation-time-b) infinite; }
+  .a13{ animation: a13 var(--animation-time-b) infinite; }
+  .a14{ animation: a14 var(--animation-time-b) infinite; }
+  .a15{ animation: a15 var(--animation-time-b) infinite; }
+  .a16{ animation: a16 var(--animation-time-b) infinite; }
+  .a17{ animation: a17 var(--animation-time-b) infinite; }
+  .a18{ animation: a18 var(--animation-time-b) infinite; }
+  .a19{ animation: a19 var(--animation-time-b) infinite; }
+  .a20{ animation: a20 var(--animation-time-b) infinite; }
+
+  @keyframes a1{ 0%,100%{fill:#004C51} 5%{fill:var(--colorhight)} }
+  @keyframes a2{ 0%,100%{fill:#004C51} 10%{fill:var(--colorhight)} }
+  @keyframes a3{ 0%,100%{fill:#004C51} 15%{fill:var(--colorhight)} }
+  @keyframes a4{ 0%,100%{fill:#004C51} 20%{fill:var(--colorhight)} }
+  @keyframes a5{ 0%,100%{fill:#004C51} 25%{fill:var(--colorhight)} }
+  @keyframes a6{ 0%,100%{fill:#004C51} 30%{fill:var(--colorhight)} }
+  @keyframes a7{ 0%,100%{fill:#004C51} 35%{fill:var(--colorhight)} }
+  @keyframes a8{ 0%,100%{fill:#004C51} 40%{fill:var(--colorhight)} }
+  @keyframes a9{ 0%,100%{fill:#004C51} 45%{fill:var(--colorhight)} }
+  @keyframes a10{ 0%,100%{fill:#004C51} 50%{fill:var(--colorhight)} }
+  @keyframes a11{ 0%,100%{fill:#004C51} 55%{fill:var(--colorhight)} }
+  @keyframes a12{ 0%,100%{fill:#004C51} 60%{fill:var(--colorhight)} }
+  @keyframes a13{ 0%,100%{fill:#004C51} 65%{fill:var(--colorhight)} }
+  @keyframes a14{ 0%,100%{fill:#004C51} 70%{fill:var(--colorhight)} }
+  @keyframes a15{ 0%,100%{fill:#004C51} 75%{fill:var(--colorhight)} }
+  @keyframes a16{ 0%,100%{fill:#004C51} 80%{fill:var(--colorhight)} }
+  @keyframes a17{ 0%,100%{fill:#004C51} 85%{fill:var(--colorhight)} }
+  @keyframes a18{ 0%,100%{fill:#004C51} 90%{fill:var(--colorhight)} }
+  @keyframes a19{ 0%,100%{fill:#004C51} 95%{fill:var(--colorhight)} }
+  @keyframes a20{ 
+    0%{fill:#004C51} 
+    95%{fill:var(--colorhight)} 
+    96%{fill:#004C51} 
+    97%{fill:var(--colorhight)} 
+    98%{fill:#004C51} 
+    99%{fill:var(--colorhight)} 
+    100%{fill:#004C51} 
+  }
+#topbox{
+}
