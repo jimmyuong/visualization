@@ -1,4 +1,5 @@
 import * as echarts from "echarts";
+import {flashingAnimation,updateData} from './animation'
 
 // 全局调色盘。
 const colorArray = [
@@ -100,6 +101,7 @@ function createSimpleEncode(ref, obj, dataArray) {
         ]
       };
     myChart.setOption(option);
+    //updateData(myChart, dataArray); 
   }
 
 // //折线图堆叠
@@ -145,6 +147,7 @@ function createDatasetinObjectArray(ref, obj, dataArray) {
     series: [{ type: "bar" }, { type: "bar" }, { type: "bar" }],
   };
   myChart.setOption(option);
+  updateData(myChart, dataArray); 
 }
 //某地区蒸发量和降水量
 function createRainfallandEvaporation(ref, obj, dataArray) {
@@ -236,6 +239,7 @@ function createRainfallandEvaporation(ref, obj, dataArray) {
     ],
   };
   myChart.setOption(option);
+  updateData(myChart, dataArray); 
 }
 
 // //玫瑰图
@@ -274,6 +278,7 @@ function createRoseChart(ref, obj, dataArray) {
     ],
   };
   myChart.setOption(option);
+  updateData(myChart, dataArray); 
 }
 
 // //折线图堆叠
@@ -331,6 +336,7 @@ function createHalfDoughnutChart(ref, obj, dataArray) {
     ],
   };
   myChart.setOption(option);
+  updateData(myChart, dataArray); 
 }
 
 //雷达图
@@ -398,6 +404,7 @@ function createBasicradarchart(ref, obj, dataArray) {
     ],
   };
   myChart.setOption(option);
+  //updateData(myChart, dataArray); 
 }
 
 //折线图区域高亮
@@ -484,6 +491,7 @@ function createAreapieces(ref, obj, dataArray) {
     ],
   };
   myChart.setOption(option);
+  updateData(myChart, dataArray); 
 }
 
 //折线图堆叠
@@ -570,6 +578,7 @@ function createStackedlinechart(ref, obj, dataArray) {
     ],
   };
   myChart.setOption(option);
+  updateData(myChart, dataArray); 
 }
 
 //基础面积图
@@ -611,6 +620,7 @@ function createBasicareachart(ref, obj, dataArray) {
     ],
   };
   myChart.setOption(option);
+  updateData(myChart, dataArray); 
 }
 
 //拆线图
@@ -663,6 +673,7 @@ function createChartLine(ref, obj, dataArray) {
     ],
   };
   myChart.setOption(option);
+  updateData(myChart, dataArray); 
 }
 
 //柱状图
@@ -671,6 +682,7 @@ function createChartColumn(ref, obj, dataArray) {
   const myChart = echarts.init(chartDom);
   const option = {
     color: colorArray,
+    animation:true,
     xAxis: {
       type: "category",
       data: dataArray,
@@ -706,6 +718,12 @@ function createChartColumn(ref, obj, dataArray) {
         name: "Example Data",
         type: "bar",
         data: dataArray,
+        animationType: 'scale', // Set the animation type for this series
+          animationDuration: 1000, // Set the animation duration in milliseconds
+          animationDelay: function (idx) {
+           // Set the animation delay for each data item in the series
+          return idx * 100;
+        },
         itemStyle: {
           color: {
             type: "linear",
@@ -729,8 +747,9 @@ function createChartColumn(ref, obj, dataArray) {
     ],
   };
   myChart.setOption(option);
+  //flashingAnimation(myChart);
+  updateData(myChart, dataArray); 
 }
-
 export {
   createSimpleEncode,
   createDatasetinObjectArray,

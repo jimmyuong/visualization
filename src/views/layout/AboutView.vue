@@ -7,9 +7,7 @@
       <Box :boxsetting="boxparameter4"></Box>
       <Box :boxsetting="boxparameter5"></Box>
       <Box :boxsetting="boxparameter6"></Box>
-      <Box :boxsetting="boxparameter7"></Box>
-      <Box :boxsetting="boxparameter8"></Box>
-      <Box :boxsetting="boxparameter9"></Box>
+      <Adjustable :boxsetting="boxparameter10"></Adjustable>
       <TableBox :tableboxsetting="tableboxparameter"></TableBox>
       <!-- <Pie positionValue="000,1770" title="日本語ってこんな感じ"></Pie>
       <Box positionValue="400,000" title="اللاتينية مثل هذا" type="type1" ></Box>
@@ -25,6 +23,7 @@
 <script>
 import Box from '@/components/Box.vue'
 import TableBox from '@/components/TableBox.vue'
+import Adjustable from '@/components/Adjustable'
 import Pie from '@/components/Pie.vue'
 import LesMiserables from '@/components/LesMiserables.vue'
 import {svgs} from '@/svg/svg'
@@ -133,14 +132,14 @@ export default {
         chartstyle:"RainfallandEvaporation"
       },
       boxparameter10:{
-        positionValue:"800,1180",
+        positionValue:"800,000",
         width:"100%",
         height:'320px',
         title:"日本語ってこんな感じ", 
-        type:"type4", 
+        type:"adjustable1", 
         visualstyle:"bar", 
         datas:this.dataArray,
-        chartstyle:"RainfallandEvaporation"
+        chartstyle:""
       },
     }
   },
@@ -156,6 +155,7 @@ export default {
     TableBox,
     Pie,
     LesMiserables,
+    Adjustable,
   },
   methods:{
     generateRandomArray() {

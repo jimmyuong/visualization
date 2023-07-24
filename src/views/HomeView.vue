@@ -1,11 +1,6 @@
 <template>
   <div class="home">
-    <header>
-      <i v-html="svgs.nav.svg" class="navicon"></i>
-      <i v-html="svgs.personal.svg" class="personalicon"></i>
-      <div v-html="svgs.top.svg"></div>
-      <h1 style="position: absolute; left:0; right:0;" v-html="svgs.logo.svg"> </h1>
-    </header>
+   <TopView></TopView> 
     <main>
       <Breadcrumbs></Breadcrumbs>
       <MainView></MainView>
@@ -20,7 +15,9 @@
 <script>
 // @ is an alias to /src
 import MainView from '@/views/layout/MainView'
+import TopView from '@/views/layout/TopView'
 import Breadcrumbs from '@/components/Breadcrumbs.vue'
+import Tabs from '@/components/Tabs.vue'
 import {svgs} from '@/svg/svg'
 
 export default {
@@ -32,7 +29,9 @@ export default {
   },
   components: {
     MainView,
-    Breadcrumbs
+    Breadcrumbs,
+    TopView,
+    Tabs
   }
 }
 </script>

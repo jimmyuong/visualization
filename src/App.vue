@@ -1,6 +1,16 @@
 <template>
+  <NavView></NavView>
   <router-view/>
 </template>
+
+<script>
+import NavView from '@/components/Nav.vue'
+export default{
+  components:{
+    NavView
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
