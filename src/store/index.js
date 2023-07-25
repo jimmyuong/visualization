@@ -4,6 +4,9 @@ export default createStore({
   state: {
     switch:{
       nav:false
+    },
+    theme:{
+      
     }
   },
   getters: {

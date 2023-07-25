@@ -21,6 +21,16 @@ const routes = [
     path:'/earth',
     name: 'earth',
     component: () => import ('../views/EarthView.vue')
+  },
+  {
+    path:'/big',
+    name: 'big',
+    component: () => import ('../views/BigView.vue')
+  },
+  {
+    path: '/blue', // The URL path to match for this route
+    name: 'blue', // A unique name for the route (optional but recommended for navigation)
+    component: () => import('../views/BlueView.vue'), // The component to render for this route
   }
 ]
 

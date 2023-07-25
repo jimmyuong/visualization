@@ -6,6 +6,7 @@
       <div v-if="boxsetting.type==='type1'" class="box" v-html="modules.type1.svg"></div>
       <div v-else-if="boxsetting.type==='type2'" class="box" v-html="modules.type2.svg"></div>
       <div v-else-if="boxsetting.type==='type3'" class="box" v-html="modules.type3.svg"></div>
+      <div v-else-if="boxsetting.type==='typebig1'" class="box" v-html="modules.boxbig1.svg"></div>
 
       <div :class="[{chart:this.boxsetting.type != 'type3'},{chartadd:this.boxsetting.type == 'type3'}]" ref="chart" :style="{ width: boxsetting.width, height: boxsetting.height }"></div>
 
