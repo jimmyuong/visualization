@@ -1,6 +1,8 @@
 <template>
+  <body :class="this.$store.state.theme">
   <NavView></NavView>
   <router-view/>
+  </body>
 </template>
 
 <script>

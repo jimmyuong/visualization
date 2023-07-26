@@ -1,23 +1,11 @@
 import * as echarts from "echarts";
-import {flashingAnimation,updateData} from './animation'
+import {flashingAnimation,updateData,createDatasetinObjectArrayData} from './animation'
 
 // 全局调色盘。
-const colorArray = [
-  "#00B7BD",
-  "#007A7E",
-  "#00969B",
-  "#008A8E",
-  "#00A7AC",
-  "#006063",
-  "#00484A",
-  "#002B2D",
-  "#00E4EC",
-  "#00CED4",
-  "#00B3B9",
-];
+
 
 // //折线图堆叠
-// function createStackedlinechart(ref, obj, dataArray) {
+// function createStackedlinechart(ref, obj, dataArray, colorArray) {
 //     const chartDom = ref;
 //     const myChart = echarts.init(chartDom);
 //     const option = {
@@ -27,7 +15,7 @@ const colorArray = [
 //   }
 
 // //指定数据到坐标轴的映射
-function createSimpleEncode(ref, obj, dataArray) {
+function createSimpleEncode(ref, obj, dataArray, colorArray) {
     const chartDom = ref;
     const myChart = echarts.init(chartDom);
     const option = {
@@ -105,16 +93,17 @@ function createSimpleEncode(ref, obj, dataArray) {
   }
 
 // //折线图堆叠
-function createDatasetinObjectArray(ref, obj, dataArray) {
+function createDatasetinObjectArray(ref, obj, dataArray, colorArray) {
   const chartDom = ref;
   const myChart = echarts.init(chartDom);
   const option = {
     color: colorArray,
-    legend: {},
-    tooltip: {},
+    // legend: {}, 图例小标
+     tooltip: {},
     dataset: {
       dimensions: ["product", "2015", "2016", "2017"],
-      source: [
+      source: 
+       [
         { product: "Matcha Latte", 2015: 43.3, 2016: 85.8, 2017: 93.7 },
         { product: "Milk Tea", 2015: 83.1, 2016: 73.4, 2017: 55.1 },
         { product: "Cheese Cocoa", 2015: 86.4, 2016: 65.2, 2017: 82.5 },
@@ -147,10 +136,11 @@ function createDatasetinObjectArray(ref, obj, dataArray) {
     series: [{ type: "bar" }, { type: "bar" }, { type: "bar" }],
   };
   myChart.setOption(option);
-  updateData(myChart, dataArray); 
+  //updateData(myChart, dataArray); 
+  updateData(myChart, createDatasetinObjectArrayData); 
 }
 //某地区蒸发量和降水量
-function createRainfallandEvaporation(ref, obj, dataArray) {
+function createRainfallandEvaporation(ref, obj, dataArray, colorArray) {
   const chartDom = ref;
   const myChart = echarts.init(chartDom);
   const option = {
@@ -243,7 +233,7 @@ function createRainfallandEvaporation(ref, obj, dataArray) {
 }
 
 // //玫瑰图
-function createRoseChart(ref, obj, dataArray) {
+function createRoseChart(ref, obj, dataArray, colorArray) {
   const chartDom = ref;
   const myChart = echarts.init(chartDom);
   const option = {
@@ -282,14 +272,14 @@ function createRoseChart(ref, obj, dataArray) {
 }
 
 // //折线图堆叠
-function createHalfDoughnutChart(ref, obj, dataArray) {
+function createHalfDoughnutChart(ref, obj, dataArray, colorArray) {
   const chartDom = ref;
   const myChart = echarts.init(chartDom);
   const option = {
     color: colorArray,
-    tooltip: {
-      trigger: "item",
-    },
+    // tooltip: {
+    //   trigger: "item",
+    // },
     // legend: {
     //   top: '5%',
     //   left: 'center',
@@ -340,7 +330,7 @@ function createHalfDoughnutChart(ref, obj, dataArray) {
 }
 
 //雷达图
-function createBasicradarchart(ref, obj, dataArray) {
+function createBasicradarchart(ref, obj, dataArray, colorArray) {
   const chartDom = ref;
   const myChart = echarts.init(chartDom);
   const option = {
@@ -408,7 +398,7 @@ function createBasicradarchart(ref, obj, dataArray) {
 }
 
 //折线图区域高亮
-function createAreapieces(ref, obj, dataArray) {
+function createAreapieces(ref, obj, dataArray, colorArray) {
   const chartDom = ref;
   const myChart = echarts.init(chartDom);
   const option = {
@@ -470,7 +460,7 @@ function createAreapieces(ref, obj, dataArray) {
           data: [{ xAxis: 1 }, { xAxis: 3 }, { xAxis: 5 }, { xAxis: 7 }],
         },
         areaStyle: {
-          color: "#006063",
+          color: colorArray[3],
         },
         itemStyle: {
           // Customize the line color and other styles here
@@ -495,7 +485,7 @@ function createAreapieces(ref, obj, dataArray) {
 }
 
 //折线图堆叠
-function createStackedlinechart(ref, obj, dataArray) {
+function createStackedlinechart(ref, obj, dataArray, colorArray) {
   const chartDom = ref;
   const myChart = echarts.init(chartDom);
   const option = {
@@ -549,31 +539,30 @@ function createStackedlinechart(ref, obj, dataArray) {
         name: "Email",
         type: "line",
         stack: "Total",
-        data: [120, 132, 101, 134, 90, 230, 210],
+        data: dataArray,
       },
       {
         name: "Union Ads",
         type: "line",
         stack: "Total",
-        data: [220, 182, 191, 234, 290, 330, 310],
+        data: dataArray,
       },
       {
         name: "Video Ads",
         type: "line",
         stack: "Total",
-        data: [150, 232, 201, 154, 190, 330, 410],
+        data: dataArray,
       },
       {
         name: "Direct",
         type: "line",
-        stack: "Total",
-        data: [320, 332, 301, 334, 390, 330, 320],
+        data: dataArray,
       },
       {
         name: "Search Engine",
         type: "line",
         stack: "Total",
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        data: dataArray,
       },
     ],
   };
@@ -582,7 +571,7 @@ function createStackedlinechart(ref, obj, dataArray) {
 }
 
 //基础面积图
-function createBasicareachart(ref, obj, dataArray) {
+function createBasicareachart(ref, obj, dataArray, colorArray) {
   const chartDom = ref;
   const myChart = echarts.init(chartDom);
   const option = {
@@ -615,7 +604,9 @@ function createBasicareachart(ref, obj, dataArray) {
       {
         data: dataArray,
         type: "line",
-        areaStyle: {},
+        areaStyle: {
+          color:colorArray[3]
+        },
       },
     ],
   };
@@ -624,7 +615,7 @@ function createBasicareachart(ref, obj, dataArray) {
 }
 
 //拆线图
-function createChartLine(ref, obj, dataArray) {
+function createChartLine(ref, obj, dataArray, colorArray) {
   const chartDom = ref;
   const myChart = echarts.init(chartDom);
   const option = {
@@ -677,7 +668,7 @@ function createChartLine(ref, obj, dataArray) {
 }
 
 //柱状图
-function createChartColumn(ref, obj, dataArray) {
+function createChartColumn(ref, obj, dataArray, colorArray) {
   const chartDom = ref;
   const myChart = echarts.init(chartDom);
   const option = {
@@ -731,16 +722,16 @@ function createChartColumn(ref, obj, dataArray) {
             y: 0,
             x2: 0,
             y2: 1,
-            // colorStops: [
-            //   {
-            //     offset: 0,
-            //     color: "#00B7BD",
-            //   },
-            //   {
-            //     offset: 1,
-            //     color: "#000000",
-            //   },
-            // ],
+            colorStops: [
+              {
+                offset: 0,
+                color: colorArray[0],
+              },
+              {
+                offset: 1,
+                color: colorArray[2],
+              },
+            ],
           },
         },
       },

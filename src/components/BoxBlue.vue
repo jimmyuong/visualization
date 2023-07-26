@@ -1,11 +1,11 @@
 <template>
   <div class="frame" ref="frame" @click="splitPixel">
     <div class="ground">
-      <h2>{{ boxsetting.title }}</h2>
+      <h2 :style="{'color':chartsetting.xcolor}">{{ boxsetting.title }}</h2>
       <input type="text" :v-model="boxsetting.positionValue" :placeholder="boxsetting.positionValue" >
-      <div v-if="boxsetting.type==='type1'" class="box" v-html="modules.type1.svg"></div>
-      <div v-else-if="boxsetting.type==='type2'" class="box" v-html="modules.type2.svg"></div>
-      <div v-else-if="boxsetting.type==='type3'" class="box" v-html="modules.type3.svg"></div>
+      <div v-if="boxsetting.type==='type1'" class="box" v-html="modules.type1.blue.svg"></div>
+      <div v-else-if="boxsetting.type==='type2'" class="box" v-html="modules.type2.blue.svg"></div>
+      <div v-else-if="boxsetting.type==='type3'" class="box" v-html="modules.type3.blue.svg"></div>
       <div v-else-if="boxsetting.type==='typebig1'" class="box" v-html="modules.boxbig1.svg"></div>
 
       <div :class="[{chart:this.boxsetting.type != 'type3'},{chartadd:this.boxsetting.type == 'type3'}]" ref="chart" :style="{ width: boxsetting.width, height: boxsetting.height }"></div>
@@ -28,9 +28,9 @@ export default {
       modules:modules,
       dataArray:[],
       chartsetting:{
-        xcolor:'#006B6F',
-        ycolor:'#006B6F',
-        splitColor:'#002C2E'//分割线
+        xcolor:'#499AF6',
+        ycolor:'#499AF6',
+        splitColor:'#001F3E'//分割线
       }
     }
   },
@@ -42,7 +42,7 @@ export default {
     // type:String,
     // datas:Array,
     // chartstyle: String,
-    colors:Array,  
+    colors:Array,
     boxsetting: {
     type: Object,
       default: () => ({}), // Provide an empty object as the default value
@@ -51,7 +51,9 @@ export default {
   mounted(){
     this.splitPixel;
     this.generateRandomArray()
-   
+    this.colors
+
+
     if(this.boxsetting.chartstyle == 'line'){
       createChartLine(this.$refs.chart,this.chartsetting,this.dataArray,this.colors)
     }else if(this.boxsetting.chartstyle  == 'column'){

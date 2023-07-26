@@ -3,10 +3,10 @@
     <div class="cover" @click="setSwitchNav"></div>
 
       <nav>
-        <li @click="setTheme({key:theme,value:blue})">
+        <li @click="$store.commit('setTheme','blue')">
             Theme Blue
         </li>
-        <li @click="setTheme({key:theme,value:blue})">
+        <li @click="$store.commit('setTheme','cyan')">
             Theme Cyan
         </li>
         <li>
@@ -44,7 +44,7 @@ export default{
             this.$store.commit("setSwitch",{key:'nav',value:false})
         },
         setTheme(obj){
-            this.$store.commit('setTheme',{})
+            this.$store.commit('setTheme',obj)
         }
     }
 }
@@ -64,13 +64,13 @@ a:visited{
     color:white;
 }
  nav{
-    background-color: rgb(0, 66, 60);
+    background-color:var(--lowcolor);
     z-index:1000;
     position: absolute;
     top:3rem;
     left:0;
+    color:white;
     a{
-        color:aqua
     }
  }
 

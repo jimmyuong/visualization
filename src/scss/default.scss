@@ -1,10 +1,22 @@
 :root{
     --animation-time:2s;
     --animation-time-b:6s;
-    --main-color:#00F7FF;
-    --active-color:#006063;
-    --colorhight:#00F7FF;
+    // --main-color:#00F7FF;
+    // --active-color:#006063;
+    // --lowcolor:#363636;
+    // --colorhight:#e0e0e0;
     --header-height:56px;
+}
+
+.blue{
+    --lowcolor:#00193e;
+    --colorhight:#0764ef;
+    --background:url('@/assets/backgroundblue.png')
+}
+.cyan{
+    --lowcolor:#006063;
+    --colorhight:#00ceb9;
+    --background:url('@/assets/backgroundcyan.png')
 }
 header{
     height:var(--header-height);
@@ -66,7 +78,7 @@ table div {
   }
 
   body,#app{
-    background:url('@/assets/background.png');
+    background:url('@/assets/backgroundblue.png');
     background-size:100%;
     background-color: black;
     width:100vw;

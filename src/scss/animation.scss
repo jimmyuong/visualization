@@ -43,31 +43,31 @@
 .a19{ animation: a19 var(--animation-time-b) infinite; }
 .a20{ animation: a20 var(--animation-time-b) infinite; }
 
-@keyframes a1{ 0%,100%{fill:#004C51} 5%{fill:var(--colorhight)} }
-@keyframes a2{ 0%,100%{fill:#004C51} 10%{fill:var(--colorhight)} }
-@keyframes a3{ 0%,100%{fill:#004C51} 15%{fill:var(--colorhight)} }
-@keyframes a4{ 0%,100%{fill:#004C51} 20%{fill:var(--colorhight)} }
-@keyframes a5{ 0%,100%{fill:#004C51} 25%{fill:var(--colorhight)} }
-@keyframes a6{ 0%,100%{fill:#004C51} 30%{fill:var(--colorhight)} }
-@keyframes a7{ 0%,100%{fill:#004C51} 35%{fill:var(--colorhight)} }
-@keyframes a8{ 0%,100%{fill:#004C51} 40%{fill:var(--colorhight)} }
-@keyframes a9{ 0%,100%{fill:#004C51} 45%{fill:var(--colorhight)} }
-@keyframes a10{ 0%,100%{fill:#004C51} 50%{fill:var(--colorhight)} }
-@keyframes a11{ 0%,100%{fill:#004C51} 55%{fill:var(--colorhight)} }
-@keyframes a12{ 0%,100%{fill:#004C51} 60%{fill:var(--colorhight)} }
-@keyframes a13{ 0%,100%{fill:#004C51} 65%{fill:var(--colorhight)} }
-@keyframes a14{ 0%,100%{fill:#004C51} 70%{fill:var(--colorhight)} }
-@keyframes a15{ 0%,100%{fill:#004C51} 75%{fill:var(--colorhight)} }
-@keyframes a16{ 0%,100%{fill:#004C51} 80%{fill:var(--colorhight)} }
-@keyframes a17{ 0%,100%{fill:#004C51} 85%{fill:var(--colorhight)} }
-@keyframes a18{ 0%,100%{fill:#004C51} 90%{fill:var(--colorhight)} }
-@keyframes a19{ 0%,100%{fill:#004C51} 95%{fill:var(--colorhight)} }
+@keyframes a1{ 0%,100%{fill:var(--lowcolor)} 5%{fill:var(--colorhight)} }
+@keyframes a2{ 0%,100%{fill:var(--lowcolor)} 10%{fill:var(--colorhight)} }
+@keyframes a3{ 0%,100%{fill:var(--lowcolor)} 15%{fill:var(--colorhight)} }
+@keyframes a4{ 0%,100%{fill:var(--lowcolor)} 20%{fill:var(--colorhight)} }
+@keyframes a5{ 0%,100%{fill:var(--lowcolor)} 25%{fill:var(--colorhight)} }
+@keyframes a6{ 0%,100%{fill:var(--lowcolor)} 30%{fill:var(--colorhight)} }
+@keyframes a7{ 0%,100%{fill:var(--lowcolor)} 35%{fill:var(--colorhight)} }
+@keyframes a8{ 0%,100%{fill:var(--lowcolor)} 40%{fill:var(--colorhight)} }
+@keyframes a9{ 0%,100%{fill:var(--lowcolor)} 45%{fill:var(--colorhight)} }
+@keyframes a10{ 0%,100%{fill:var(--lowcolor)} 50%{fill:var(--colorhight)} }
+@keyframes a11{ 0%,100%{fill:var(--lowcolor)} 55%{fill:var(--colorhight)} }
+@keyframes a12{ 0%,100%{fill:var(--lowcolor)} 60%{fill:var(--colorhight)} }
+@keyframes a13{ 0%,100%{fill:var(--lowcolor)} 65%{fill:var(--colorhight)} }
+@keyframes a14{ 0%,100%{fill:var(--lowcolor)} 70%{fill:var(--colorhight)} }
+@keyframes a15{ 0%,100%{fill:var(--lowcolor)} 75%{fill:var(--colorhight)} }
+@keyframes a16{ 0%,100%{fill:var(--lowcolor)} 80%{fill:var(--colorhight)} }
+@keyframes a17{ 0%,100%{fill:var(--lowcolor)} 85%{fill:var(--colorhight)} }
+@keyframes a18{ 0%,100%{fill:var(--lowcolor)} 90%{fill:var(--colorhight)} }
+@keyframes a19{ 0%,100%{fill:var(--lowcolor)} 95%{fill:var(--colorhight)} }
 @keyframes a20{ 
-  0%{fill:#004C51} 
+  0%{fill:var(--lowcolor)} 
   95%{fill:var(--colorhight)} 
-  96%{fill:#004C51} 
+  96%{fill:var(--lowcolor)} 
   97%{fill:var(--colorhight)} 
-  98%{fill:#004C51} 
+  98%{fill:var(--lowcolor)} 
   99%{fill:var(--colorhight)} 
-  100%{fill:#004C51} 
+  100%{fill:var(--lowcolor)} 
 }

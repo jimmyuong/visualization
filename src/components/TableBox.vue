@@ -1,7 +1,7 @@
 <template>
     <div ref="tablebox" class="tablebox" :style="{ width: tableboxsetting.width, height: tableboxsetting.height }">
-        <table>
-            <thead>
+        <table :style="{'color':colors[2]}">
+            <thead :style="{'color':colors[0]}">
                 <tr>
                     <th>Brand</th>
                     <th>Model</th>
@@ -11,87 +11,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Tesla</td>
-                    <td>Model 3</td>
-                    <td>300</td>
-                    <td>8</td>
-                    <td>40000</td>
-                </tr>
-                <!-- Add more rows here -->
-                <!-- 50 rows of data -->
-
-                <!-- Example: -->
-                <tr>
-                    <td>Nissan</td>
-                    <td>Leaf</td>
-                    <td>150</td>
-                    <td>6</td>
-                    <td>30000</td>
-                </tr>
-                <tr>
-                    <td>Nissan</td>
-                    <td>Leaf</td>
-                    <td>150</td>
-                    <td>6</td>
-                    <td>30000</td>
-                </tr>
-                <tr>
-                    <td>Nissan</td>
-                    <td>Leaf</td>
-                    <td>150</td>
-                    <td>6</td>
-                    <td>30000</td>
-                </tr>
-                <tr>
-                    <td>Nissan</td>
-                    <td>Leaf</td>
-                    <td>150</td>
-                    <td>6</td>
-                    <td>30000</td>
-                </tr>
-                <tr>
-                    <td>Nissan</td>
-                    <td>Leaf</td>
-                    <td>150</td>
-                    <td>6</td>
-                    <td>30000</td>
-                </tr>
-                <tr>
-                    <td>Nissan</td>
-                    <td>Leaf</td>
-                    <td>150</td>
-                    <td>6</td>
-                    <td>30000</td>
-                </tr>
-                <tr>
-                    <td>Nissan</td>
-                    <td>Leaf</td>
-                    <td>150</td>
-                    <td>6</td>
-                    <td>30000</td>
-                </tr>
-                <tr>
-                    <td>Nissan</td>
-                    <td>Leaf</td>
-                    <td>150</td>
-                    <td>6</td>
-                    <td>30000</td>
-                </tr>
-                <tr>
-                    <td>Nissan</td>
-                    <td>Leaf</td>
-                    <td>150</td>
-                    <td>6</td>
-                    <td>30000</td>
-                </tr>
-                <tr>
-                    <td>Nissan</td>
-                    <td>Leaf</td>
-                    <td>150</td>
-                    <td>6</td>
-                    <td>30000</td>
-                </tr>
                 <tr v-for="n in 100" :key="n">
                     <td>Nissan{{ n }}</td>
                     <td>Leaf</td>
@@ -109,18 +28,18 @@ export default {
     data() {
         return {
         }
-
     },
     props: {
         tableboxsetting: {
             type: Object,
             default: () => ({}), // Provide an empty object as the default value
         },
+        colors:Array
     },
     mounted() {
         this.splitPixel();
         console.log(this.tableboxsetting)
-        console.log("aksdjflasjflajsfladjsfljasflkajsdlfjalksdjf")
+        console.log(this.colors)
     },
     methods: {
         splitPixel() {

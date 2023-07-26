@@ -39,4 +39,39 @@ function updateData(myChart,dataArray) {
       }, 3000);
     }
 
-export {flashingAnimation,updateData}
+
+
+
+
+    // 随机生成一个名称
+function generateRandomName() {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  let name = '';
+  for (let i = 0; i < 5; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    name += characters.charAt(randomIndex);
+  }
+  return name;
+}
+
+// 原始数据
+const source = [
+  { product: "Matcha Latte", 2015: 43.3, 2016: 85.8, 2017: 93.7 },
+  { product: "Milk Tea", 2015: 83.1, 2016: 73.4, 2017: 55.1 },
+  { product: "Cheese Cocoa", 2015: 86.4, 2016: 65.2, 2017: 82.5 },
+  { product: "Walnut Brownie", 2015: 72.4, 2016: 53.9, 2017: 39.1 },
+];
+
+// 根据原始数据生成新的对象
+const createDatasetinObjectArrayData = source.map(item => {
+  const newItem = { ...item };
+  for (let i = 2018; i <= 2022; i++) {
+    newItem[i] = Math.floor(Math.random() * 100);
+  }
+  newItem.product = generateRandomName();
+  return newItem;
+});
+
+
+
+export {flashingAnimation,updateData,createDatasetinObjectArrayData}

@@ -5,9 +5,7 @@ export default createStore({
     switch:{
       nav:false
     },
-    theme:{
-      
-    }
+    theme:'blue',
   },
   getters: {
   },
@@ -16,6 +14,9 @@ export default createStore({
       state.switch[item.key] = item.value;
      // if(state.switch.tabs == false){ state.switch.tabsPin = false }//如果tabs 关闭了，就将tabsPin的也关闭了
     },
+    setTheme(state,item){
+      state.theme = item
+    }
   },
   actions: {
   },

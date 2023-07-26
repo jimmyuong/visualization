@@ -1,16 +1,16 @@
 <template>
-      <Box :boxsetting="boxparameter"></Box>
-      <Box :boxsetting="boxparameter1"></Box>
-      <!-- <Pie positionValue="000,1180" title="日本語ってこんな感じ" state="danger"></Pie> -->
-      <Box :boxsetting="boxparameter2"></Box>
-      <Box :boxsetting="boxparameter3"></Box>
-      <Box :boxsetting="boxparameter4"></Box>
-      <Box :boxsetting="boxparameter5"></Box>
-      <Box :boxsetting="boxparameter6"></Box>
-      <Box :boxsetting="boxparameter7"></Box>
-      <Box :boxsetting="boxparameter8"></Box>
-      <Box :boxsetting="boxparameter9"></Box>
-      <TableBox :tableboxsetting="tableboxparameter"></TableBox>
+      <Box :boxsetting="boxparameter" :colors="colorArray"></Box>
+      <Box :boxsetting="boxparameter1" :colors="colorArray"></Box>
+      <!-- <Pie positionValue="000,118 :colors="colorArray"0" title="日本語ってこんな感じ" state="danger"></Pie> -->
+      <Box :boxsetting="boxparameter2" :colors="colorArray"></Box>
+      <Box :boxsetting="boxparameter3" :colors="colorArray"></Box>
+      <Box :boxsetting="boxparameter4" :colors="colorArray"></Box>
+      <Box :boxsetting="boxparameter5" :colors="colorArray"></Box>
+      <Box :boxsetting="boxparameter6" :colors="colorArray"></Box>
+      <Box :boxsetting="boxparameter7" :colors="colorArray"></Box>
+      <Box :boxsetting="boxparameter8" :colors="colorArray"></Box>
+      <Box :boxsetting="boxparameter9" :colors="colorArray"></Box>
+      <TableBox :tableboxsetting="tableboxparameter" :colors="colorArray"></TableBox>
       <!-- <Pie positionValue="000,1770" title="日本語ってこんな感じ"></Pie>
       <Box positionValue="400,000" title="اللاتينية مثل هذا" type="type1" ></Box>
       <Box positionValue="400,590" title="اللاتينية مثل هذا" type="type1" ></Box>
@@ -28,6 +28,7 @@ import TableBox from '@/components/TableBox.vue'
 import Pie from '@/components/Pie.vue'
 import LesMiserables from '@/components/LesMiserables.vue'
 import {svgs} from '@/svg/svg'
+import {colorArray} from '@/function/create'
 
 export default {
   name: 'HomeView',
@@ -41,6 +42,17 @@ export default {
         width:"500px",
         height:'1180px',
       },
+      colorArray:["#00B7BD",
+  "#007A7E",
+  "#00969B",
+  "#008A8E",
+  "#00A7AC",
+  "#006063",
+  "#00484A",
+  "#002B2D",
+  "#00E4EC",
+  "#00CED4",
+  "#00B3B9",],
       boxparameter:{
         positionValue:"000,000",
         width:"100%",
@@ -149,6 +161,7 @@ export default {
     //this.$refs.frame.addEventListener('mousemove', this.handleFrameMousemove);
     this.generateRandomArray()
     this.dataArray
+
   },
 
   components: {

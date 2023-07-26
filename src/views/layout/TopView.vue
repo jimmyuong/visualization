@@ -5,7 +5,7 @@
     <i v-html="svgs.personal.svg" class="personalicon"></i>
     
     <div v-if="state" v-html="svgs.top.svg"></div>
-    <div v-if="stateto" v-html="svgs.top.blue.svg"></div>
+    <div v-if="stateto" v-html="banner.banner1.blue.svg"></div>
     <h1 style="position: absolute; right:0;left:0; right:0;" v-html="svgs.logo.svg" :class="{'blue':state}" > </h1>
 </header>
 </template>
@@ -14,6 +14,7 @@
 <script>
 import Tabs from '@/components/Tabs.vue'
 import {svgs} from '@/svg/svg'
+import {banner} from '@/svg/banner'
 
 export default{
     data (){
@@ -21,6 +22,7 @@ export default{
             svgs:svgs,
             state:false,
             stateto:true,
+            banner:banner,
         }
     },
     methods: {

@@ -3,7 +3,7 @@
    <TopView></TopView> 
     <main>
       <Breadcrumbs></Breadcrumbs>
-      <MainView></MainView>
+      <Cyan></Cyan>
       <div class="backtop" v-html="svgs.side.svg"></div>
       <div class="backtop mirror" v-html="svgs.side.svg"></div>
       <div class="backbottom" v-html="svgs.bottom.svg"></div>
@@ -14,7 +14,7 @@
 
 <script>
 // @ is an alias to /src
-import MainView from '@/views/layout/MainView'
+import Cyan from '@/views/Block/Cyan.vue'
 import TopView from '@/views/layout/TopView'
 import Breadcrumbs from '@/components/Breadcrumbs.vue'
 import Tabs from '@/components/Tabs.vue'
@@ -28,7 +28,7 @@ export default {
     }
   },
   components: {
-    MainView,
+    Cyan,
     Breadcrumbs,
     TopView,
     Tabs
