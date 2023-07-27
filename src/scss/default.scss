@@ -9,13 +9,17 @@
 }
 
 .blue{
+    --main-color:#8ad0ff;
     --lowcolor:#00193e;
-    --colorhight:#0764ef;
+    --colorhight:#00aeff;
+    --active-color:#104571;
     --background:url('@/assets/backgroundblue.png')
 }
 .cyan{
+    --main-color:#00F7FF;
     --lowcolor:#006063;
     --colorhight:#00ceb9;
+    --active-color:#006063;
     --background:url('@/assets/backgroundcyan.png')
 }
 header{
@@ -43,7 +47,18 @@ main{
 .dangerLine{
        
 }
-
+i{
+  margin: 0 8px;
+  svg{
+    path{
+      fill:var(--main-color)
+    }
+  }
+  .is{
+    height:32px;
+    width:32px;
+  }
+}
 table {
   border-collapse: collapse; /* Remove spacing between table cells */
   margin: 0; /* Remove margin around the table */
@@ -78,7 +93,7 @@ table div {
   }
 
   body,#app{
-    background:url('@/assets/backgroundblue.png');
+    background:var(--background);
     background-size:100%;
     background-color: black;
     width:100vw;

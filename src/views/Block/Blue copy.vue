@@ -1,10 +1,10 @@
 <template>
   <BoxBlue :boxsetting="boxparameter" :colors="colorArray"></BoxBlue>
-  <!-- <BoxBlue :boxsetting="boxparameter1" :colors="colorArray"></BoxBlue> -->
-  <!-- <BoxBlue :boxsetting="boxparameter3" :colors="colorArray"></BoxBlue> -->
+  <BoxBlue :boxsetting="boxparameter1" :colors="colorArray"></BoxBlue>
+  <BoxBlue :boxsetting="boxparameter3" :colors="colorArray"></BoxBlue>
   <BoxBlue :boxsetting="boxparameter4" :colors="colorArray"></BoxBlue>
-  <!-- <BoxBlue :boxsetting="boxparameter5" :colors="colorArray"></BoxBlue>
-  <BoxBlue :boxsetting="boxparameter6" :colors="colorArray"></BoxBlue> -->
+  <BoxBlue :boxsetting="boxparameter5" :colors="colorArray"></BoxBlue>
+  <BoxBlue :boxsetting="boxparameter6" :colors="colorArray"></BoxBlue>
   <BoxBlue :boxsetting="boxparameter7" :colors="colorArray"></BoxBlue>
   <BoxBlue :boxsetting="boxparameter8" :colors="colorArray"></BoxBlue>
   <BoxBlue :boxsetting="boxparameter9" :colors="colorArray"></BoxBlue>
@@ -12,9 +12,6 @@
   <BoxBlue :boxsetting="boxparameter11" :colors="colorArray"></BoxBlue>
   <BoxBlue :boxsetting="boxparameter12" :colors="colorArray"></BoxBlue>
   <BoxBlue :boxsetting="boxparameter13" :colors="colorArray"></BoxBlue>
-
-  <BoxBlue :boxsetting="boxparameter18" :colors="colorArray"></BoxBlue>
-
 
   <!-- <TableBox :tableboxsetting="tableboxparameter" :colors="colorArray"></TableBox> -->
   <!-- <Pie positionValue="000,1770" title="日本語ってこんな感じ"></Pie>
@@ -59,16 +56,6 @@ return {
     positionValue:"050,1820",
     width:"500px",
     height:'1180px',
-  },
-  boxparameter18:{
-    positionValue:"000,600",
-    width:"100%",
-    height:'360px',
-    title:"ENGLISH LIKE", 
-    type:"mainformblue", 
-    visualstyle:"bar", 
-    datas:this.dataArray,
-    chartstyle:"none"
   },
   boxparameter:{
     positionValue:"000,000",
@@ -175,11 +162,11 @@ return {
     positionValue:"000,1770",
     width:"100%",
     height:'360px',
-    title:"Basicareachart", 
+    title:"NightingaleChart", 
     type:"type2", 
     visualstyle:"bar", 
     datas:this.dataArray,
-    chartstyle:"Basicareachart"
+    chartstyle:"NightingaleChart"
   },
   boxparameter12:{
     positionValue:"400,1770",

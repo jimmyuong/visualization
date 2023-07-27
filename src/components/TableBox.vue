@@ -58,7 +58,7 @@ export default {
     width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color:#06868D;
+    background-color:var(--main-color);
 }
 
 
@@ -68,7 +68,7 @@ export default {
 }
 
 table {
-    color: #009A9F;
+    color: var(--main-color);
         width: 100%;
         //table-layout: fixed;
         thead{
@@ -83,7 +83,7 @@ table {
         th {
             height: 3rem;
             line-height: 3rem;
-            border-top: 1px solid #006B6F;
+            border-top: 1px solid var(--main-color);
 
         }
 
@@ -93,12 +93,12 @@ table {
             td {
                 height: 3rem;
                 line-height: 3rem;
-                border-top: 1px solid #006B6F;
+                border-top: 1px solid var(--main-color);
             }
 
             &:last-child {
                 td {
-                    border-bottom: 1px solid #006B6F;
+                    border-bottom: 1px solid var(--main-color);
                 }
             }
 

@@ -1331,7 +1331,24 @@ cricle:{
 </defs>
 </svg>
      `
-}
+},
+    flowstar:{
+        svg:`<svg width="10" height="95" viewBox="0 0 10 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="5" cy="48" rx="5" ry="47" fill="url(#paint0_radial_1549_10367)"/>
+        <circle cx="5" cy="2" r="2" fill="url(#paint1_radial_1549_10367)"/>
+        <defs>
+        <radialGradient id="paint0_radial_1549_10367" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(5 5.5) rotate(90) scale(65 3.34152)">
+        <stop stop-color="#00A2FD"/>
+        <stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="paint1_radial_1549_10367" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(5 2) rotate(90) scale(2)">
+        <stop stop-color="#D9D9D9"/>
+        <stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
+        </radialGradient>
+        </defs>
+        </svg>
+        `
+    }
 }
 
 export {svgs}

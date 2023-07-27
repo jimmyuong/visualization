@@ -8,9 +8,9 @@
 .flash7{ animation:flash7 var(--animation-time) infinite; }
 .flash8{ animation:flash8 var(--animation-time) infinite; }
 .flash9{ animation:flash9 var(--animation-time) infinite; }
-.flash11{ animation:flash11 var(--animation-time) infinite; }
-@keyframes flash11{ 0%, 100% { opacity: .1; } 50% { opacity: 1; } }
-@keyframes flash1{ 0%, 100% { opacity: 0; } 10% { opacity: .1; } }
+.flash10{ animation:flash10 var(--animation-time) infinite; }
+@keyframes flash11{ 0%, 100% { opacity:0 ; } 50% { opacity: 1; } }
+@keyframes flash9{ 0%, 100% { opacity: 0; } 10% { opacity: .9; } }
 @keyframes flash8{ 0%, 100% { opacity: 0; } 20% { opacity: .8; } }
 @keyframes flash7{ 0%, 100% { opacity: 0; } 30% { opacity: .7; } } 
 @keyframes flash6{ 0%, 100% { opacity: 0; } 40% { opacity: .6; } }
@@ -70,4 +70,49 @@
   98%{fill:var(--lowcolor)} 
   99%{fill:var(--colorhight)} 
   100%{fill:var(--lowcolor)} 
+}
+
+
+.gradient-stroke-animation {
+  position: relative;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.gradient-stroke-animation::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(135deg, #ff0000, #00ff00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradient-stroke 3s infinite;
+}
+
+@keyframes gradient-stroke {
+  0%, 100% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+
+
+
+.b1{
+  animation:b1 1s infinite;
+}
+@keyframes b1 {
+  0%{ transform: translateY(80px);opacity: 0;}
+  20%{ transform: translateY(-200px);opacity: 1;}
+  100%{ transform: translateY(-500px);opacity: 0;}
 }

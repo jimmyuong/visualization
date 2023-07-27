@@ -18,7 +18,7 @@
 import {svgs} from '@/svg/svg'
 import {modules} from '@/svg/modules'
 
-import { createSimpleEncode,createDatasetinObjectArray,createRainfallandEvaporation,createRoseChart,createHalfDoughnutChart,createBasicradarchart,createAreapieces,createStackedlinechart,createChartLine,createChartColumn,createBasicareachart} from "@/function/create"
+import { createRefererofaWebsite,createNightingaleChart,createSimpleEncode,createDatasetinObjectArray,createRainfallandEvaporation,createRoseChart,createHalfDoughnutChart,createBasicradarchart,createAreapieces,createStackedlinechart,createChartLine,createChartColumn,createBasicareachart} from "@/function/create"
 
 export default {
   name: 'HelloWorld',
@@ -49,8 +49,10 @@ export default {
     },
   },
   mounted(){
+    
     this.splitPixel;
     this.generateRandomArray()
+    console.log(this.boxsetting.chartstyle)
    
     if(this.boxsetting.chartstyle == 'line'){
       createChartLine(this.$refs.chart,this.chartsetting,this.dataArray,this.colors)
@@ -74,6 +76,10 @@ export default {
       createDatasetinObjectArray(this.$refs.chart,this.chartsetting,this.dataArray,this.colors)
     }else if(this.boxsetting.chartstyle == "SimpleEncode"){
       createSimpleEncode(this.$refs.chart,this.chartsetting,this.dataArray,this.colors)
+    }else if(this.boxsetting.chartstyle == "NightingaleChart"){
+      createNightingaleChart(this.$refs.chart,this.chartsetting,this.dataArray,this.colors)
+    }else if(this.boxsetting.chartstyle == "RefererofaWebsite"){
+      createRefererofaWebsite(this.$refs.chart,this.chartsetting,this.dataArray,this.colors)
     }
   },
   methods:{

@@ -1,6 +1,7 @@
 <template>
     <TopView></TopView>
     <main>
+      <Breadcrumbs></Breadcrumbs>
         <Blue></Blue>
         <div class="backtop" v-html="background.style1.topleft.svg"></div>
       <div class="backtop mirror" v-html="background.style1.topleft.svg"></div>
@@ -13,6 +14,7 @@
   import TopView from '@/views/layout/TopView'
   import Blue from '@/views/Block/Blue.vue'
   import { background }from '@/svg/background'
+  import Breadcrumbs from '@/components/Breadcrumbs.vue'
   
   export default {
       data () {
@@ -21,11 +23,12 @@
           }
       },
       mounted(){
-        this.background
+        console.log("BlueView.vue")
       },
       components: {
           TopView,
-          Blue
+          Blue,
+          Breadcrumbs
       } 
   }
   </script>

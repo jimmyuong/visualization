@@ -6,7 +6,7 @@
     
     <div v-if="state" v-html="svgs.top.svg"></div>
     <div v-if="stateto" v-html="banner.banner1.blue.svg"></div>
-    <h1 style="position: absolute; right:0;left:0; right:0;" v-html="svgs.logo.svg" :class="{'blue':state}" > </h1>
+    <h1 style="position: absolute; right:0;left:0; right:0;"  ><i  v-html="svgs.logo.svg" ></i></h1>
 </header>
 </template>
 

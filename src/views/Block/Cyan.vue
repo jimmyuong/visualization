@@ -39,7 +39,7 @@ export default {
       pixel:'000,200',
       tableboxparameter:{
         positionValue:"050,1820",
-        width:"500px",
+        width:"580px",
         height:'1180px',
       },
       colorArray:["#00B7BD",

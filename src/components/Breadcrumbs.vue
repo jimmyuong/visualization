@@ -1,11 +1,11 @@
 <template>
   <div class="breadcrumbs">
-    <i v-html="svgs.home.svg"></i>
-    <span class="active">Home Item</span>
+    <i class="is" v-html="svgs.home.svg"></i>
+    <span class="active">中文是这样的</span>
     <i v-html="svgs.arrow.svg"></i>
-    <span class="active">Active Item</span>
+    <span class="active">日本語ってこんな感じ</span>
     <i v-html="svgs.arrow.svg"></i>
-    <span class="currentSelected">Current Item</span>
+    <span class="currentSelected">Current ENGLISH LIKE</span>
   </div>
 </template>
 
@@ -27,6 +27,9 @@ export default{
     position: absolute;
     left:1rem;
     top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .active{
     color:var(--active-color)

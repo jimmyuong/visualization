@@ -13,6 +13,96 @@ import {flashingAnimation,updateData,createDatasetinObjectArrayData} from './ani
 //     };
 //     myChart.setOption(option);
 //   }
+//Referer of a Website某站点用户Access From
+function createRefererofaWebsite(ref, obj, dataArray, colorArray) {
+  console.log("createRefererofaWebsite")
+      const chartDom = ref;
+      const myChart = echarts.init(chartDom);
+      const option = {
+        color:colorArray,
+        // title: {
+        //   text: 'Referer of a Website',
+        //   subtext: 'Fake Data',
+        //   left: 'center'
+        // },
+        // tooltip: {
+        //   trigger: 'item'
+        // },
+        // legend: {
+        //   orient: 'vertical',
+        //   left: 'left'
+        // },
+        series: [
+          {
+            name: 'Access From',
+            type: 'pie',
+            radius: '50%',
+            data: [
+              { value: 1048, name: 'Search Engine' },
+              { value: 735, name: 'Direct' },
+              { value: 580, name: 'Email' },
+              { value: 484, name: 'Union Ads' },
+              { value: 300, name: 'Video Ads' }
+            ],
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+              }
+            }
+          }
+        ]
+      };
+      myChart.setOption(option);
+      updateData(myChart, dataArray); 
+    }
+
+
+//基础南丁格尔玫瑰图
+  function createNightingaleChart(ref, obj, dataArray, colorArray) {
+    const chartDom = ref;
+    const myChart = echarts.init(chartDom);
+    const option = {
+      color:colorArray,
+      // legend: {
+      //   top: 'bottom'
+      // },
+      // toolbox: {
+      //   show: true,
+      //   feature: {
+      //     mark: { show: true },
+      //     dataView: { show: true, readOnly: false },
+      //     restore: { show: true },
+      //     saveAsImage: { show: true }
+      //   }
+      // },
+      series: [
+        {
+          name: 'Nightingale Chart',
+          type: 'pie',
+          radius: [30, 110],
+          center: ['50%', '50%'],
+          roseType: 'area',
+          itemStyle: {
+            borderRadius: 8
+          },
+          data: [
+            { value: 40, name: 'rose 1' },
+            { value: 38, name: 'rose 2' },
+            { value: 32, name: 'rose 3' },
+            { value: 30, name: 'rose 4' },
+            { value: 28, name: 'rose 5' },
+            { value: 26, name: 'rose 6' },
+            { value: 22, name: 'rose 7' },
+            { value: 18, name: 'rose 8' }
+          ]
+        }
+      ]
+    };
+    myChart.setOption(option);
+    updateData(myChart, dataArray); 
+}
 
 // //指定数据到坐标轴的映射
 function createSimpleEncode(ref, obj, dataArray, colorArray) {
@@ -89,7 +179,7 @@ function createSimpleEncode(ref, obj, dataArray, colorArray) {
         ]
       };
     myChart.setOption(option);
-    //updateData(myChart, dataArray); 
+    updateData(myChart, dataArray); 
   }
 
 // //折线图堆叠
@@ -742,7 +832,9 @@ function createChartColumn(ref, obj, dataArray, colorArray) {
   updateData(myChart, dataArray); 
 }
 export {
+  createRefererofaWebsite,
   createSimpleEncode,
+  createNightingaleChart,
   createDatasetinObjectArray,
   createRainfallandEvaporation,
   createRoseChart,

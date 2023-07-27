@@ -7,6 +7,8 @@
       <div v-else-if="boxsetting.type==='type2'" class="box" v-html="modules.type2.blue.svg"></div>
       <div v-else-if="boxsetting.type==='type3'" class="box" v-html="modules.type3.blue.svg"></div>
       <div v-else-if="boxsetting.type==='typebig1'" class="box" v-html="modules.boxbig1.svg"></div>
+      <div v-else-if="boxsetting.type==='mainformblue'" class="box flashdot" v-html="modules.mainformblue2.svg"></div>
+      
 
       <div :class="[{chart:this.boxsetting.type != 'type3'},{chartadd:this.boxsetting.type == 'type3'}]" ref="chart" :style="{ width: boxsetting.width, height: boxsetting.height }"></div>
 
@@ -18,7 +20,7 @@
 import {svgs} from '@/svg/svg'
 import {modules} from '@/svg/modules'
 
-import { createSimpleEncode,createDatasetinObjectArray,createRainfallandEvaporation,createRoseChart,createHalfDoughnutChart,createBasicradarchart,createAreapieces,createStackedlinechart,createChartLine,createChartColumn,createBasicareachart} from "@/function/create"
+import { createRefererofaWebsite,createNightingaleChart,createSimpleEncode,createDatasetinObjectArray,createRainfallandEvaporation,createRoseChart,createHalfDoughnutChart,createBasicradarchart,createAreapieces,createStackedlinechart,createChartLine,createChartColumn,createBasicareachart} from "@/function/create"
 
 export default {
   name: 'HelloWorld',
@@ -54,6 +56,7 @@ export default {
     this.colors
 
 
+    
     if(this.boxsetting.chartstyle == 'line'){
       createChartLine(this.$refs.chart,this.chartsetting,this.dataArray,this.colors)
     }else if(this.boxsetting.chartstyle  == 'column'){
@@ -76,6 +79,10 @@ export default {
       createDatasetinObjectArray(this.$refs.chart,this.chartsetting,this.dataArray,this.colors)
     }else if(this.boxsetting.chartstyle == "SimpleEncode"){
       createSimpleEncode(this.$refs.chart,this.chartsetting,this.dataArray,this.colors)
+    }else if(this.boxsetting.chartstyle == "NightingaleChart"){
+      createNightingaleChart(this.$refs.chart,this.chartsetting,this.dataArray,this.colors)
+    }else if(this.boxsetting.chartstyle == "RefererofaWebsite"){
+      createRefererofaWebsite(this.$refs.chart,this.chartsetting,this.dataArray,this.colors)
     }
   },
   methods:{
@@ -119,4 +126,23 @@ h2{
   position: absolute;
   top:4rem;
 }
+
+.flashdot{
+  position: relative;
+  // &::before{
+  //   position: absolute;
+  //   content:'';
+  //   display:block;
+  //   left:-2px;
+  //   border-left: 5px solid transparent;
+  // border-right: 5px solid transparent;
+  // border-bottom: 25px solid #ffffff;
+  //   animation:fd1 3s infinite;
+  //   background:url()
+  // }
+}
+
+
+
+
 </style>
