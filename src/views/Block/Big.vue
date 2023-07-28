@@ -15,7 +15,7 @@ import LesMiserables from '@/components/LesMiserables.vue'
 import {svgs} from '@/svg/svg'
 
 export default {
-name: 'HomeView',
+name: 'CyanView',
 data () {
   return {
     svgs:svgs,

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
 
-    <TopView></TopView>
+    <HeaderView></HeaderView>
     <main>
       <Breadcrumbs></Breadcrumbs>
       <AboutView></AboutView>
@@ -17,12 +17,12 @@
 // @ is an alias to /src
 
 import AboutView from '@/views/layout/AboutView'
-import TopView from '@/views/layout/TopView'
+import HeaderView from '@/views/layout/HeaderView'
 import Breadcrumbs from '@/components/Breadcrumbs.vue'
 import {svgs} from '@/svg/svg'
 
 export default {
-  name: 'HomeView',
+  name: 'CyanView',
   data () {
     return {
       svgs:svgs
@@ -31,7 +31,7 @@ export default {
   components: {
     AboutView,
     Breadcrumbs,
-    TopView,
+    HeaderView,
 
   }
 }

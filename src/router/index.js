@@ -1,11 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: () => import(/* webpackChunkName: "about" */ '../views/CyanView.vue')
   },
   {
     path: '/about',
@@ -31,6 +30,11 @@ const routes = [
     path: '/blue', // The URL path to match for this route
     name: 'blue', // A unique name for the route (optional but recommended for navigation)
     component: () => import('../views/BlueView.vue'), // The component to render for this route
+  },
+  {
+    path:'/perspective',
+    name:'Perspective',
+    component: () => import('../views/Perspective.vue')
   }
 ]
 

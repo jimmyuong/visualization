@@ -1,12 +1,12 @@
 <template>
-    <TopView></TopView>
+    <HeaderView></HeaderView>
     <main>
     <Big></Big>
     </main>
   </template>
   
   <script>
-  import TopView from '@/views/layout/TopView'
+  import HeaderView from '@/views/layout/HeaderView'
   import Big from '@/views/Block/Big'
   
   export default {
@@ -16,7 +16,7 @@
           }
       },
       components: {
-          TopView,
+          HeaderView,
           Big
       } 
   }

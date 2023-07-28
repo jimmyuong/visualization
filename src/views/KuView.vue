@@ -1,9 +1,9 @@
 <template>
-  <TopView></TopView>
+  <HeaderView></HeaderView>
 </template>
 
 <script>
-import TopView from '@/views/layout/TopView'
+import HeaderView from '@/views/layout/HeaderView'
 
 export default {
     data () {
@@ -12,7 +12,7 @@ export default {
         }
     },
     components: {
-        TopView
+        HeaderView
     } 
 }
 </script>

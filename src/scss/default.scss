@@ -13,6 +13,7 @@
     --lowcolor:#00193e;
     --colorhight:#00aeff;
     --active-color:#104571;
+    --hover-color:#003f63;
     --background:url('@/assets/backgroundblue.png')
 }
 .cyan{
@@ -20,6 +21,7 @@
     --lowcolor:#006063;
     --colorhight:#00ceb9;
     --active-color:#006063;
+    --hover-color:#006063;
     --background:url('@/assets/backgroundcyan.png')
 }
 header{
@@ -144,9 +146,8 @@ table div {
     position: absolute;
     z-index: 300;
   }
-  input{
+  input[class="buttonabosulte"]{
       background-color: transparent;
-      z-index: 301;
       border:0;
       padding:0;
       margin:0;
@@ -198,6 +199,15 @@ table div {
   }
 
 #topbox{
+}
+
+.perspective{
+  position: relative;
+  width:100vw;
+  height: 100vh;
+ transform-style: preserve-3d;
+ transform: perspective(1200px) rotateY(60deg) scale(.5);
+// //transform: perspective(800px) rotateY(35deg) scale(.5);
 }
 
 @import './animation.scss';

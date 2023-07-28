@@ -34,7 +34,7 @@ import {svgs} from '@/svg/svg'
 import {colorArray} from '@/function/create'
 
 export default {
-name: 'HomeView',
+name: 'CyanView',
 data () {
 return {
   svgs:svgs,

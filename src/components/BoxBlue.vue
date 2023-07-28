@@ -2,7 +2,7 @@
   <div class="frame" ref="frame" @click="splitPixel">
     <div class="ground">
       <h2 :style="{'color':chartsetting.xcolor}">{{ boxsetting.title }}</h2>
-      <input type="text" :v-model="boxsetting.positionValue" :placeholder="boxsetting.positionValue" >
+      <input class="buttonabosulte" type="text" :v-model="boxsetting.positionValue" :placeholder="boxsetting.positionValue" >
       <div v-if="boxsetting.type==='type1'" class="box" v-html="modules.type1.blue.svg"></div>
       <div v-else-if="boxsetting.type==='type2'" class="box" v-html="modules.type2.blue.svg"></div>
       <div v-else-if="boxsetting.type==='type3'" class="box" v-html="modules.type3.blue.svg"></div>

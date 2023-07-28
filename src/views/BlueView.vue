@@ -1,5 +1,6 @@
 <template>
-    <TopView></TopView>
+  <div>
+    <HeaderView :theme="blue"></HeaderView>
     <main>
       <Breadcrumbs></Breadcrumbs>
         <Blue></Blue>
@@ -8,10 +9,11 @@
       <div class="backbottom" v-html="background.style1.bottomleft.svg"></div>
       <div class="backbottom mirror" v-html="background.style1.bottomleft.svg"></div>
     </main>
+    </div>
   </template>
   
   <script>
-  import TopView from '@/views/layout/TopView'
+  import HeaderView from '@/views/layout/HeaderView'
   import Blue from '@/views/Block/Blue.vue'
   import { background }from '@/svg/background'
   import Breadcrumbs from '@/components/Breadcrumbs.vue'
@@ -19,14 +21,15 @@
   export default {
       data () {
           return {
-            background:background 
+            background:background,
+            blue:'Blue'
           }
       },
       mounted(){
         console.log("BlueView.vue")
       },
       components: {
-          TopView,
+          HeaderView,
           Blue,
           Breadcrumbs
       } 
@@ -51,4 +54,6 @@
     position: absolute;
     right:2rem;
   }
+
+
   </style>

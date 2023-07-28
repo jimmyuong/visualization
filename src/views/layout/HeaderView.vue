@@ -1,11 +1,9 @@
 <template>
 <header>
     <i v-html="svgs.nav.svg" class="navicon" @click="setSwitchNav" style="position: absolute; z-index: 600;"></i>
-    <i @click="setState" style="position: absolute;z-index:100; left:4rem;">Theme</i>
     <i v-html="svgs.personal.svg" class="personalicon"></i>
-    
-    <div v-if="state" v-html="svgs.top.svg"></div>
-    <div v-if="stateto" v-html="banner.banner1.blue.svg"></div>
+    <div v-if="this.theme == 'Cyan'" v-html="svgs.top.svg"></div>
+    <div v-else-if="this.theme == 'Blue'" v-html="banner.banner1.blue.svg"></div>
     <h1 style="position: absolute; right:0;left:0; right:0;"  ><i  v-html="svgs.logo.svg" ></i></h1>
 </header>
 </template>
@@ -23,6 +21,17 @@ export default{
             state:false,
             stateto:true,
             banner:banner,
+        }
+    },
+    props: {
+        theme:String
+    },
+    mounted(){
+        console.log(this.theme)
+        if(this.theme == 'Cyan'){
+            this.$store.commit("setTheme",'cyan')
+        }else if(this.theme == "Blue"){
+            this.$store.commit("setTheme",'blue')
         }
     },
     methods: {

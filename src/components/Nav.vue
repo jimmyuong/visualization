@@ -10,6 +10,11 @@
             Theme Cyan
         </li>
         <li>
+            <a href="/perspective">
+                效果
+            </a>
+        </li>
+        <li>
         <a href="/">可调节</a>
         </li>
         <li>
@@ -67,11 +72,26 @@ a:visited{
     background-color:var(--lowcolor);
     z-index:1000;
     position: absolute;
-    top:3rem;
+    height:100vh;
+    width:342px;
     left:0;
     color:white;
-    a{
+    li{
+        height:3rem;
+        line-height:3rem;
+        list-style-type: none;
+        align-items: left;
+        &:hover{
+            background-color:var(--hover-color)
+        }
+        a{
+            display: block;
+            text-decoration: none;
+          height:3rem;
+          line-height:3rem;
+        }
     }
+
  }
 
 </style>

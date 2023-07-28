@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-   <TopView></TopView> 
+   <HeaderView :theme="cyan"></HeaderView> 
     <main>
       <Breadcrumbs></Breadcrumbs>
       <Cyan></Cyan>
@@ -15,27 +15,28 @@
 <script>
 // @ is an alias to /src
 import Cyan from '@/views/Block/Cyan.vue'
-import TopView from '@/views/layout/TopView'
+import HeaderView from '@/views/layout/HeaderView'
 import Breadcrumbs from '@/components/Breadcrumbs.vue'
 import Tabs from '@/components/Tabs.vue'
 import {svgs} from '@/svg/svg'
 
 export default {
-  name: 'HomeView',
+  name: 'CyanView',
   data () {
     return {
-      svgs:svgs
+      svgs:svgs,
+      cyan:'Cyan'
     }
   },
   components: {
     Cyan,
     Breadcrumbs,
-    TopView,
+    HeaderView,
     Tabs
   }
 }
 </script>
-<style>
+<style lang="scss">
 .backtop,.backbottom{
   position:absolute;
   z-index: -100;
@@ -53,5 +54,11 @@ export default {
 .personalicon{
   position: absolute;
   right:2rem;
+}
+
+.home{
+  //transform: rotate3d(1, 1, 2, 45deg)
+
+  
 }
 </style>
